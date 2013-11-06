@@ -68,7 +68,7 @@ class TranslatedFieldDescriptor(object):
 
             if translation is None:
                 # Improve error message
-                e.args = ("{1}\nAttempted to read attribute {0}.".format(self.field.name, e.args[0]),)
+                e.args = (u"{1}\nAttempted to read attribute {0}.".format(self.field.name, e.args[0]),)
                 raise
 
         return getattr(translation, self.field.name)
